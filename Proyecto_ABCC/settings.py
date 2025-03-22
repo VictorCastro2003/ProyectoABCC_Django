@@ -84,11 +84,11 @@ DATABASES = {
 
     'default':{
         'ENGINE':'django.db.backends.mysql',
-        'NAME':'sql3768931',
-        'USER':'sql3768931',
-        'PASSWORD':'CQjbDcvDbk',
-        'HOST':'sql3.freesqldatabase.com',
-        'PORT':'3306',
+        'NAME':'railway',
+        'USER':'root',
+        'PASSWORD':'bkWXOWIuTbRWPOGYkfUqfRjGIptdbcRf',
+        'HOST':'switchback.proxy.rlwy.net',
+        'PORT':'51644',
     }
 }
 
