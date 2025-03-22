@@ -84,10 +84,10 @@ DATABASES = {
 
     'default':{
         'ENGINE':'django.db.backends.mysql',
-        'NAME':'BD_Django_2025',
-        'USER':'victorcastro',
-        'PASSWORD':'itsj',
-        'HOST':'localhost',
+        'NAME':'sql3768931',
+        'USER':'sql3768931',
+        'PASSWORD':'CQjbDcvDbk',
+        'HOST':'sql3.freesqldatabase.com',
         'PORT':'3306',
     }
 }
