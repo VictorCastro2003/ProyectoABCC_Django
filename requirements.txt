@@ -16,6 +16,6 @@ django-debug-toolbar==4.2.0  # Herramienta de depuración
 requests==2.31.0  # Para hacer solicitudes HTTP
 python-dotenv==1.0.0  # Para manejar variables de entorno
 django-widget-tweaks
-
+gunicorn
 django-bootstrap5
 
