@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-l#@jxdus=ja2^jwnt+(e!3ubyl9#pude3kj1s@e%(tl)i^ma)0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
 
 
 # Application definition
@@ -122,7 +122,7 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-ALLOWED_HOSTS = ["proyectoabcc-django.onrender.com"]
+ALLOWED_HOSTS = ["proyectoabcc-django-1.onrender.com"]
 
 
 # Static files (CSS, JavaScript, Images)
