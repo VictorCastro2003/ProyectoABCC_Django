@@ -84,11 +84,11 @@ DATABASES = {
 
     'default':{
         'ENGINE':'django.db.backends.mysql',
-        'NAME':'railway',
-        'USER':'root',
-        'PASSWORD':'bkWXOWIuTbRWPOGYkfUqfRjGIptdbcRf',
-        'HOST':'switchback.proxy.rlwy.net',
-        'PORT':'51644',
+        'NAME':'btldotgudhy1exb18sey',
+        'USER':'uver4zyp7czemcjo',
+        'PASSWORD':'3RVgPRApcLX9SlcwepRe',
+        'HOST':'btldotgudhy1exb18sey-mysql.services.clever-cloud.com',
+        'PORT':'3306',
     }
 }
 
