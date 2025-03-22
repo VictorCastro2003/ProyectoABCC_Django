@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: Proyecto_ABCC
+    runtime: python
+    buildCommand: "pip install -r requirements.txt && python manage.py migrate"
+    startCommand: "gunicorn Proyecto_ABCC.wsgi:application"

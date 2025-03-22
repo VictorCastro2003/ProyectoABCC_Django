@@ -1,0 +1,17 @@
+# Django
+Django==5.1.7  # Versión específica de Django
+
+# Base de datos
+psycopg2-binary==2.9.9  # Para PostgreSQL
+mysqlclient==2.2.0  # Para MySQL
+
+# Archivos estáticos
+whitenoise==6.6.0  # Para servir archivos estáticos en producción
+
+# Entorno de desarrollo
+ipython==8.12.0  # Mejora la consola interactiva de Django
+django-debug-toolbar==4.2.0  # Herramienta de depuración
+
+# Otras dependencias
+requests==2.31.0  # Para hacer solicitudes HTTP
+python-dotenv==1.0.0  # Para manejar variables de entorno

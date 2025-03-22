@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+ {% load django_bootstrap5 %}
+ 
+ {% bootstrap_css %}
+
+ {% load widget_tweaks %}
+
+ {% load static%}
+
+</head>
+<body>
+  
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="../public/assets/images/alumnos.jpg" class="img-fluid"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07"
+          aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample07">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">INICIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Asignaturas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Docentes</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container mt-5 mb-5">
+
+    <div class="row">
+
+      <div class="col-md-12">
+
+        <h1 style="font-size: 28px; margin-top: 50px;" class=" text-center">SERVICIOS ESCOLARES </h1>
+
+
+
+        <div class="col-md-10">
+
+          <!-- NAVEGACION -->
+          
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item" aria-current="page">Inicio</li>
+              <li class="breadcrumb-item active" aria-current="page">Alumnos</li>
+            </ol>
+          </nav>
+
+          <div class="row">
+
+            <div class="col-md-12">
+
+              <div class="content-box-large">
+
+                <div class="panel-heading">
+                  <div class="panel-title">
+                    <h2>Listado de Alumnos</h2>
+                  </div>
+
+                </div>
+                  <div class="panel-body">
+                    
+                      <div class="msj alert alert-primary"role= "alert">
+                        
+                      </div>
+                    
+
+                    <a href="crear" class="btn btn-success mt-4 ml-3">AGREGAR</a>
+                    <!--CARGAR ALUMNOS EN UNA TABLA HTML-->
+
+                    <section class="example mt-4">
+                      <div class="table-responsive" id="tabla_alumnos">
+                        <!--------ALUMNOS DESDE BD---------->
+                        <table class='table table-striped table-bordered table-hover text-center '>
+                          <thead>
+                            <tr>
+                              <th>Numero de Control</th>
+                              <th>Nombre</th>
+                              <th>Primer Ap</th>
+                              <th>Segundo Ap</th>
+                              <th>ACCIONES</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {% for a in object_list %}
+                           <tr>
+                                <td class='v-align-middle'> {{a.numControl}}</td>
+                                <td class='v-align-middle'> {{a.nombre}}</td>
+                                <td class='v-align-middle'> {{a.primerAp}}</td>
+                                <td class='v-align-middle'> {{a.segundoAp}}</td>
+                                <td class='v-align-middle'> 
+                                <form action="eliminar/{{a.id}}"method="POST" onSubmit="return confirmarEliminacion()">
+                                  {% csrf_token %}
+                                  <a href="detalle/{{a.id}}" class="btn btn-primary btn-sm">Detalle</a>
+                                  <a href="editar/{{a.id}}" class="btn btn-warning btn-sm">Editar</a>
+                                  <button type="submit"class="btn btn-danger btn-sm">Eliminar</button>
+                    
+                                </form> 
+                                </td>
+                                </tr>
+
+                                {% endfor %}
+                            
+                        
+                        </tbody> </table>
+                      </div>
+                    </section>
+                  </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  </div>
+
+  <hr>
+
+
+  <footer class="text-muted mt-3 mb-3">
+    <div align="center">
+      FOOTER
+    </div>
+  </footer>
